@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import RandomFox from '@/components/RandomFox'
 
 export default function Home() {
   return (
@@ -9,9 +10,10 @@ export default function Home() {
       </Head>
 
       <main>
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1> 
+        <h1 className="text-3xl font-bold underline">
+          Hello world!
+        </h1> 
+        <RandomFox />
       </main>
     </>
   )
