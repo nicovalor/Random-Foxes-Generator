@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import RandomFox from '@/components/RandomFox'
 
+const random = ()=> Math.floor(Math.random() * 123) + 1
+
 export default function Home() {
   return (
     <>
@@ -10,10 +12,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1 className="text-3xl font-bold underline">
-          Hello world!
-        </h1> 
-        <RandomFox />
+        <RandomFox image={`https://randomfox.ca/images/${random()}.jpg`} />
       </main>
     </>
   )
