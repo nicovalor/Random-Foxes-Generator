@@ -4,8 +4,10 @@ import { useState } from 'react'
 
 const random = ()=> Math.floor(Math.random() * 123) + 1
 
+type Item = {id: string, image: string}
+
 export default function Home() {
-  const [images, setImages] = useState<string[]>([])
+  const [images, setImages] = useState<Array<Item>>([])
   return (
     <>
       <Head>
