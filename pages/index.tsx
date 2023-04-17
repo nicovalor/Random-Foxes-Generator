@@ -25,7 +25,11 @@ export default function Home() {
 
       <main>
         <button onClick={handleClick}>Add new fox</button>
-        {images.map((item,index) => <LazyImage key={index} image={item.image} width='500rem 'height='auto' className="rounded bg-grey-300" />)}
+        <div className='flex flex-wrap gap-4 justify-center'>
+          {images.map((item,index) => { return <div key={index} className='w-96 h-fit overflow-hidden items-center'>
+              <LazyImage key={index} image={item.image} width='500rem 'height='auto' className="rounded bg-grey-300" /> 
+            </div>})}
+        </div>
       </main>
     </>
   )
