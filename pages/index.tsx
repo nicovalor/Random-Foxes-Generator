@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import RandomFox from '@/components/RandomFox'
 import { useState } from 'react'
 import type {MouseEventHandler} from 'react'
+import LazyImage from '@/components/RandomFox'
 
 
 const random = ()=> Math.floor(Math.random() * 123) + 1
@@ -25,7 +25,7 @@ export default function Home() {
 
       <main>
         <button onClick={handleClick}>Add new fox</button>
-        {images.map((item,index) => <RandomFox key={index} image={item.image} />)}
+        {images.map((item,index) => <LazyImage key={index} image={item.image} width='500rem 'height='auto' className="rounded bg-grey-300" />)}
       </main>
     </>
   )
