@@ -29,7 +29,7 @@ const LazyImage = ({image, ...imgProps}: Props): JSX.Element => {
         //Disconect node
         return ()=> observer.disconnect()
     },
-    [src])
+    [image])
     return <img ref={node} src={src} alt='Random Fox' {...imgProps} />
 }
 
