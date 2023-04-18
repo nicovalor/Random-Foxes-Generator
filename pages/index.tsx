@@ -23,12 +23,14 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <main>
-        <button onClick={handleClick}>Add new fox</button>
-        <div className='flex flex-wrap gap-4 justify-center'>
-          {images.map((item,index) => { return <div key={index} className='w-96 h-fit overflow-hidden items-center'>
+      <main className='flex flex-col justify-center bg-cyan-950'>
+        <button onClick={handleClick} className='my-10 rounded-full bg-cyan-400'>Add new fox</button>
+        <div className='flex justify-center items-center'>
+          <div className='flex gap-4 w-4/5  bg-red-300'>
+          {images.map((item,index) => { return <div key={index} className='w-96 h-fit'>
               <LazyImage key={index} image={item.image} width='500rem 'height='auto' className="rounded bg-grey-300" /> 
             </div>})}
+          </div>
         </div>
       </main>
     </>
