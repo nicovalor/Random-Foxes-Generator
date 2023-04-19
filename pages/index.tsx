@@ -25,7 +25,7 @@ export default function Home() {
 
       <main className='bg-sky-950'>
         <div className='bg-blue-950 shadow flex justify-center items-center'>
-          <button onClick={handleClick} className='my-10 rounded-full bg-cyan-400 p-5'>Add new fox</button>
+          <button onClick={handleClick} className='mt-10 mb-5 rounded-full bg-cyan-500 hover:bg-cyan-600 focus:outline-none focus:ring focus:ring-cyan-300 p-5'>Add new fox</button>
         </div>
         <div className='flex flex-col justify-center items-center '>
           {images.map((item,index) => { return <div key={index} className='w-96 h-fit'>
